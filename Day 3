@@ -128,3 +128,16 @@ ANSWER: class Solution {
         return res;
     }
 }
+
+++++++++++++++++++++ ANother Approach+++++++++++
+class Solution {
+    public static int sumOfDivisors(int n) {
+        int res = 0;
+        
+        for (int i = 1; i <= n; i++) {
+            res += i * (n / i); // Add i multiplied by how many times it appears as a divisor
+        }
+        
+        return res;
+    }
+}
