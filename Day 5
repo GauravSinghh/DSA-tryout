@@ -37,3 +37,21 @@ class Solution {
         return n * fact(n-1);
     }
 }
+
+BETTER APPROACH:
+
+class Solution {
+    static ArrayList<Long> factorialNumbers(long n) {
+        // code here
+        ArrayList<Long> arr = new ArrayList<Long>();
+       fact(1,1,n,arr);
+        return arr;
+    }
+    
+    static void fact(long i,long s, long n, ArrayList<Long> arr){
+       
+        if(s>n) return ;
+         arr.add(s);
+         fact(i+1, s*(i+1),n, arr);
+    }
+}
